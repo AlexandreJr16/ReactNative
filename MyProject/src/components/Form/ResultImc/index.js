@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-
+import styles from "./styles";
 const ResultImc = (props) => {
   return (
     <View style={styles.container}>
@@ -10,10 +10,4 @@ const ResultImc = (props) => {
   );
 };
 
-const styles = StyleSheet.create({
-  txt: {
-    fontSize: 16,
-    fontWeight: "600",
-  },
-});
 export default ResultImc;

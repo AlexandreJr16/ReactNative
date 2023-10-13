@@ -2,6 +2,7 @@ import React from "react";
 import ResultImc from "./ResultImc/index";
 import { View, StyleSheet, TextInput, Text, Button } from "react-native";
 import { useState } from "react";
+import styles from "./style";
 
 const Form = () => {
   const [messageImc, setMessageImc] = useState("");
@@ -55,18 +56,5 @@ const Form = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    margin: 25,
-  },
-  label: {
-    fontSize: 16,
-  },
-  input: {
-    padding: 10,
-    fontSize: 14,
-  },
-});
 
 export default Form;

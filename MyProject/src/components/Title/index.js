@@ -1,19 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import styles from "./styles";
 
 const Title = () => {
   return (
-    <View>
+    <View style={styles.titleContainer}>
       <Text style={styles.boldtext}>Você está saudável?</Text>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  boldtext: {
-    fontWeight: "bold",
-    fontSize: 25,
-  },
-});
 
 export default Title;
