@@ -22,8 +22,13 @@ const Form = () => {
 
     const result = pesoFloat / (alturaFloat * alturaFloat);
 
-    setResultImc(Math.round(result));
+    if (isNaN(altura) ?? isNaN(peso)) {
+      setMessageImc("Houve algum erro");
+      setResultImc("");
+      return;
+    }
 
+    setResultImc(Math.round(result));
     if (result < 18.5) setMessageImc("Baixo Peso");
     else if (result < 24.99) setMessageImc("Normal");
     else if (result < 29.99) setMessageImc("Sobrepeso");
@@ -31,11 +36,11 @@ const Form = () => {
   };
 
   return (
-    <View>
+    <View style={styles.formContainer}>
       <View style={styles.container}>
         <Text style={styles.label}>Altura</Text>
         <TextInput
-          placeholder="1.90"
+          placeholder="1.80"
           keyboardType="numeric"
           value={altura}
           onChangeText={handleAltura}

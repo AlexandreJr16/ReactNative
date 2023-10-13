@@ -4,9 +4,14 @@ const styles = StyleSheet.create({
   boldtext: {
     fontWeight: "bold",
     fontSize: 25,
+    color: "#fff",
   },
   titleContainer: {
-    justifyContent: "flex-start",
+    backgroundColor: "#2080ff",
+    width: "90%",
+    alignItems: "center",
+    padding: 5,
+    borderRadius: 16,
   },
 });
 
